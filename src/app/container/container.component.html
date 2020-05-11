@@ -1,0 +1,62 @@
+<button class="btn btn-primary">submit</button>
+<div class="container">
+    <h3>Router link</h3>
+    <div class="link">
+        <a [routerLink]="['/student']">Student</a>
+        <a [routerLink]="['/studentDetail']">Student Detail</a>
+        <a [routerLink]="['/empDetail']">Employee Detail</a>
+    </div>
+    <button (click)="student()">Show student</button><br>
+
+    <h3>Templete Form</h3>
+    <form #regForm='ngForm' (ngSubmit)="Register(regForm)">
+        <div class="form-group">
+            <label> Name:</label>
+            <input type="text" class="form-control" name="name" ngModel required>
+        </div>
+        <div class="form-group">
+            <label>email:</label>
+            <input type="text" class="form-control" name="email" email ngModel required #email="ngModel">
+            <span class="err_msg" *ngIf="email.touched && email.invalid">**Please enter valid email</span>
+        </div>
+        <div class="form-group">
+            <label>Address:</label>
+            <input type="text" class="form-control" name="address" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="register" [disabled]="!regForm.valid">Submit</button>
+    </form>
+
+    <!-- <h3>Using ngFor</h3>
+    <hr>
+    <ul>
+        <li *ngFor='let student of Students; let i = index;'>{{i+1}}-{{student.name}}</li>
+    </ul>
+
+    <h3>TrackBy with ngFor </h3>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="" border="1">
+                <tr *ngFor='let e of Employees; let i = index;trackBy:trackbyemployee_id'>
+                    <td>{{i+1}}</td>
+                    <td>{{e.name}}</td>
+                    <td>{{e.gender}}</td>
+                    <td>{{e.dept}}</td>
+
+                </tr>
+            </table>
+            <br>
+            <button (click)="getmoreemployees()">Get More</button>
+
+
+
+
+        </div>
+    </div>
+    <h3>Using Grouping with ngFor</h3>
+    <hr>
+    <ul *ngFor='let group of Countrydetails;'>
+        <li [ngClass]="['one', 'two']">{{group.contry}}</li>
+        <ul *ngFor='let person of group.people;'>
+            <li [ngStyle]="{'color': getColor(person.name)}" [ngClass]="'one'">{{person.name}}</li>
+        </ul>
+    </ul> -->

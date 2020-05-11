@@ -1,0 +1,38 @@
+<div class="main_content">
+    <div class="app_wrapper p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+<h3>Collection Home Page</h3>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <!-- <a class="nav-link active" data-toggle="tab" href="#home">Home</a> -->
+                            <a 
+                            routerLink="companies" 
+                            routerLinkActive="active" 
+                            [routerLinkActiveOptions]="{exact : true}"
+                            class="nav-link">Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a> -->
+                            <a routerLink="bio" routerLinkActive="active" class="nav-link">Bio</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a> -->
+                            <a routerLink="parners" routerLinkActive="active" class="nav-link">Partners</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <router-outlet></router-outlet>
+                        <!-- <div class="tab-pane container active" id="home">...</div>
+                        <div class="tab-pane container fade" id="menu1">...</div>
+                        <div class="tab-pane container fade" id="menu2">...</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="main_content">
+    <div class="app_wrapper p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>mod-home works!</p>
+                    <!-- <app-divider>Modal Component</app-divider> -->
+                    <h4>Modal Component</h4>
+                    <hr>
+                    <button class="btn btn-primary" (click)="onClick()">Show Modal</button>
+                    <app-modal (close)="onClick()" *ngIf="modalOpen">
+                        <h4 modalTitle> Reusable Title</h4>
+
+                        <p>Reusable content</p>
+                    </app-modal>
+
+                    <h4>Accordion Component</h4>
+                    <hr>
+                    <app-accordion [items]="items"></app-accordion>
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

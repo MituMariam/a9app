@@ -1,0 +1,61 @@
+
+<div class="main_content">
+    <div class="app_wrapper p-5">
+
+        <h3 class="mb-2">{{title}}</h3><hr>
+        <div class="container">
+            <div class="row">
+                <app-single-card  
+                *ngFor = 'let post of posts'
+                    [title]="post.title"
+                    [imageUrl]="post.imageUrl"
+                    [username]="post.username"
+                    [content]="post.content"
+                ></app-single-card>
+                <!-- <app-single-card  
+                    [title]="posts[1].title"
+                    [imageUrl]="posts[1].imageUrl"
+                    [username]="posts[1].username"
+                    [content]="posts[1].content"
+                ></app-single-card>
+                <app-single-card  
+                    [title]="posts[2].title"
+                    [imageUrl]="posts[2].imageUrl"
+                    [username]="posts[2].username"
+                    [content]="posts[2].content"
+                ></app-single-card>
+                 -->
+                <!-- <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/images/tree.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Neat Tree <br> <small>@ nature</small></h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/images/mountain.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Neat Tree <br> <small>@ nature</small></h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="assets/images/biking.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Neat Tree <br> <small>@ nature</small></h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>   

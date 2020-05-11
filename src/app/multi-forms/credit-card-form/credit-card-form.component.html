@@ -1,0 +1,39 @@
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Reactive form | <b>Credit Card Form</b></h3>
+        <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+    
+          <app-input label="Name" [control]="cardForm.get('name')"></app-input>
+          <app-input label="Card Number" [control]="cardForm.get('cardNumber')"></app-input>
+    
+          <div class="row">
+            <div class="col-md-6 mr-2">
+              <app-input label="Expiration (MM/YY)" [control]="cardForm.get('expiration')"></app-input>
+            </div>
+            <div class="col-md-6">
+              <app-input label="Security Code" [control]="cardForm.get('securityCode')"></app-input>
+            </div>
+          </div>
+          <Button class="btn btn-primary mt-3" [disabled]="cardForm.invalid">Submit</Button>
+          <Button class="btn btn-warning mt-3 ml-3" (click)="onResetClick()">Reset</Button>
+        </form>
+        <div>Form Contents: {{cardForm.value | json }}</div>
+        <div>Form Valid: {{cardForm.valid}}</div>
+        <div>Form Error Around: {{cardForm.controls.name.errors | json}}</div>
+    
+    
+      </div>
+      <div class="col-md-6">
+<app-card-view 
+    [name]="cardForm.get('name').value"
+    [cardNumber]="cardForm.get('cardNumber').value"
+    [expiration]="cardForm.get('expiration').value"
+    >
+
+
+    </app-card-view>
+      </div>
+    </div>
+ 

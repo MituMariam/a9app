@@ -1,0 +1,26 @@
+/* .one {
+    color: green;
+}
+
+.two {
+    font-size: 30px;
+} */
+
+/* .link {
+	position: fixed;
+	width: 225px;
+	height: 100vh;
+	background: #ddd;
+}
+.link a {
+    margin: 5px;
+    background: #ddd;
+    padding: 5px;
+} */
+
+.main_content{
+    padding-left: 225px;
+}
+input.ng-invalid.ng-touched {
+    border-color: red;
+}
